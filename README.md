@@ -4,16 +4,22 @@ My advent of code 2021 solutions.
 
 ## Using the setup
 
-**Running on dev mode for a specific day:**
-
-```bash
-pnpm start <day>
-```
-
-Or
+**Run solution for a specific day**
 
 ```bash
 pnpm go <day>
+```
+
+**Running on dev mode for a specific day:**
+
+```bash
+pnpm dev <day>
+```
+
+**Fetch input for a specific day**
+
+```bash
+pnpm input <day>
 ```
 
 ## Defining a solution

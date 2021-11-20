@@ -1,0 +1,16 @@
+{
+	"name": "advent-of-code-2021",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "runner.js",
+	"type": "module",
+	"author": "FourLineCode",
+	"repository": "https://github.com/FourLineCode/advent-of-code-2021.git",
+	"scripts": {
+		"start": "nodemon main.js",
+		"go": "node main.js"
+	},
+	"dependencies": {
+		"nodemon": "^2.0.15"
+	}
+}

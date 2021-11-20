@@ -7,8 +7,8 @@
 	"author": "FourLineCode",
 	"repository": "https://github.com/FourLineCode/advent-of-code-2021.git",
 	"scripts": {
+		"start": "node main.js",
 		"dev": "nodemon main.js",
-		"go": "node main.js",
 		"input": "node input.js"
 	},
 	"dependencies": {

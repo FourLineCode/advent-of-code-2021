@@ -7,19 +7,19 @@ My advent of code 2021 solutions.
 **Run solution for a specific day**
 
 ```bash
-pnpm go <day>
+npm start <day>
 ```
 
 **Running on dev mode for a specific day:**
 
 ```bash
-pnpm dev <day>
+npm run dev <day>
 ```
 
 **Fetch input for a specific day**
 
 ```bash
-pnpm input <day>
+npm run input <day>
 ```
 
 ## Defining a solution

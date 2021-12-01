@@ -1,5 +1,8 @@
 export function formatInput(rawInput) {
-	return rawInput.split("\n").map((v) => +v);
+	return rawInput
+		.split("\n")
+		.filter(Boolean)
+		.map((v) => +v);
 }
 
 export function solution1(input) {
@@ -14,3 +17,25 @@ export function solution2(input) {
 		return curr > prev ? a + 1 : a;
 	}, 0);
 }
+
+export const test = {
+	part1: {
+		input: `
+			199
+			200
+			208
+			210
+			200
+			207
+			240
+			269
+			260
+			263
+		`,
+		output: 7,
+	},
+	part2: {
+		input: null,
+		output: 5,
+	},
+};

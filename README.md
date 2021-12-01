@@ -40,4 +40,17 @@ export function solution1(input) {
 export function solution2(input) {
 	return "TODO";
 }
+
+export const test = {
+	part1: {
+		input: `
+			TODO
+		`,
+		output: 0,
+	},
+	part2: {
+		input: null,
+		output: 0,
+	},
+};
 ```

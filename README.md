@@ -41,15 +41,17 @@ export function solution2(input) {
 	return "TODO";
 }
 
+const input = `
+TODO
+`;
+
 export const test = {
 	part1: {
-		input: `
-			TODO
-		`,
+		input,
 		output: 0,
 	},
 	part2: {
-		input: null,
+		input,
 		output: 0,
 	},
 };

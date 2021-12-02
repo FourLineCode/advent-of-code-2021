@@ -23,4 +23,5 @@ const response = await fetch(`https://adventofcode.com/${year}/day/${day}/input`
 const contents = await response.text();
 
 await fs.promises.writeFile(`./inputs/${day}.txt`, contents, "utf8");
+console.log(contents);
 console.log(`Successfully fetched input for day - ${day}`);

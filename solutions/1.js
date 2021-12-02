@@ -18,24 +18,26 @@ export function solution2(input) {
 	}, 0);
 }
 
+const input = `
+199
+200
+208
+210
+200
+207
+240
+269
+260
+263
+`;
+
 export const test = {
 	part1: {
-		input: `
-			199
-			200
-			208
-			210
-			200
-			207
-			240
-			269
-			260
-			263
-		`,
+		input,
 		output: 7,
 	},
 	part2: {
-		input: null,
+		input,
 		output: 5,
 	},
 };

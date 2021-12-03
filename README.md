@@ -24,35 +24,4 @@ npm run input <day>
 
 ## Defining a solution
 
-Solutions are defined in JavaScript files in the `solutions` directory. The module should be named after the day (i.e. `<day>.js`), and should export two functions: `solution1` and `solution2`. Each of these solution functions will be called with the formatted input for that specific day, and the return value will be displayed to the console. You have to implement the input formatter by yourself in the solution file. The runner will automatilly watch the files and re-run whenever a code change is made. Your solution files can export async functions as well if needed.
-
-## Solution scaffold
-
-```javascript
-export function formatInput(rawInput) {
-	return rawInput;
-}
-
-export function solution1(input) {
-	return "TODO";
-}
-
-export function solution2(input) {
-	return "TODO";
-}
-
-const input = `
-TODO
-`;
-
-export const test = {
-	part1: {
-		input,
-		output: 0,
-	},
-	part2: {
-		input,
-		output: 0,
-	},
-};
-```
+Solutions are defined in JavaScript files in the `solutions` directory. The module should be named after the day (i.e. `<day>.js`), and should export two functions: `solution1` and `solution2`. Each of these solution functions will be called with the formatted input for that specific day, and the return value will be displayed to the console. You have to implement the input formatter by yourself in the solution file. The template can be found in the `template.js` file. The runner will automatilly watch the files and re-run whenever a code change is made. Your solution files can export async functions as well if needed.

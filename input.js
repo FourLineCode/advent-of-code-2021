@@ -4,12 +4,9 @@ import fetch from "node-fetch";
 
 dotenv.config();
 
-let [, , day, year] = process.argv;
+let [, , day] = process.argv;
 if (!day) {
 	throw new Error("Please provide the day of the input!");
-}
-if (!year) {
-	year = new Date().getFullYear();
 }
 
 const cookie = process.env.AOC_COOKIE;
@@ -17,7 +14,7 @@ if (!cookie) {
 	throw new Error("Please provide AOC session cookie in environment variable!");
 }
 
-const response = await fetch(`https://adventofcode.com/${year}/day/${day}/input`, {
+const response = await fetch(`https://adventofcode.com/2021/day/${day}/input`, {
 	headers: { cookie },
 });
 const contents = await response.text();

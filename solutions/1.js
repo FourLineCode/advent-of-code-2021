@@ -1,7 +1,7 @@
 export function formatInput(rawInput) {
 	return rawInput
+		.trim()
 		.split("\n")
-		.filter(Boolean)
 		.map((v) => +v);
 }
 

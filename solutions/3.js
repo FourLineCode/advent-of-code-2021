@@ -1,5 +1,5 @@
 export function formatInput(rawInput) {
-	return rawInput.split("\n").filter(Boolean);
+	return rawInput.trim().split("\n");
 }
 
 export function solution1(input) {

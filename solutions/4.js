@@ -1,16 +1,13 @@
 export function formatInput(rawInput) {
-	const input = rawInput.split("\n\n").filter(Boolean);
+	const input = rawInput.trim().split("\n\n");
 	const numbers = input[0].split(",").map((n) => +n);
 	const boards = input.slice(1).map((grid) =>
-		grid
-			.split("\n")
-			.filter(Boolean)
-			.map((v) =>
-				v
-					.split(" ")
-					.filter(Boolean)
-					.map((n) => ({ value: +n, marked: false }))
-			)
+		grid.split("\n").map((v) =>
+			v
+				.split(" ")
+				.filter(Boolean)
+				.map((n) => ({ value: +n, marked: false }))
+		)
 	);
 
 	return { numbers, boards };

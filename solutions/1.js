@@ -18,7 +18,7 @@ export function solution2(input) {
 	}, 0);
 }
 
-const input = `
+export const input = `
 199
 200
 208
@@ -31,13 +31,7 @@ const input = `
 263
 `;
 
-export const test = {
-	part1: {
-		input,
-		output: 7,
-	},
-	part2: {
-		input,
-		output: 5,
-	},
+export const output = {
+	part1: 7,
+	part2: 5,
 };

@@ -42,7 +42,7 @@ export function solution2(input) {
 	return grid.reduce((a, m) => a + m.reduce((b, n) => (n > 1 ? b + 1 : b), 0), 0);
 }
 
-const input = `
+export const input = `
 0,9 -> 5,9
 8,0 -> 0,8
 9,4 -> 3,4
@@ -55,13 +55,7 @@ const input = `
 5,5 -> 8,2
 `;
 
-export const test = {
-	part1: {
-		input,
-		output: 5,
-	},
-	part2: {
-		input,
-		output: 12,
-	},
+export const output = {
+	part1: 5,
+	part2: 12,
 };

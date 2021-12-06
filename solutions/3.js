@@ -47,7 +47,7 @@ export function solution2(input) {
 	return parseInt(oxygenIn[0], 2) * parseInt(co2In[0], 2);
 }
 
-const input = `
+export const input = `
 00100
 11110
 10110
@@ -62,13 +62,7 @@ const input = `
 01010
 `;
 
-export const test = {
-	part1: {
-		input,
-		output: 198,
-	},
-	part2: {
-		input,
-		output: 230,
-	},
+export const output = {
+	part1: 198,
+	part2: 230,
 };

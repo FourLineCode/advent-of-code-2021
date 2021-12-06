@@ -37,7 +37,7 @@ export function solution2(input) {
 	return height * depth;
 }
 
-const input = `
+export const input = `
 forward 5
 down 5
 forward 8
@@ -46,13 +46,7 @@ down 8
 forward 2
 `;
 
-export const test = {
-	part1: {
-		input,
-		output: 150,
-	},
-	part2: {
-		input,
-		output: 900,
-	},
+export const output = {
+	part1: 150,
+	part2: 900,
 };

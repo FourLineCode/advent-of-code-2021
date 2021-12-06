@@ -108,7 +108,7 @@ export function solution2({ numbers, boards }) {
 	}
 }
 
-const input = `
+export const input = `
 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
 
 22 13 17 11  0
@@ -130,13 +130,7 @@ const input = `
  2  0 12  3  7
 `;
 
-export const test = {
-	part1: {
-		input,
-		output: 4512,
-	},
-	part2: {
-		input,
-		output: 1924,
-	},
+export const output = {
+	part1: 4512,
+	part2: 1924,
 };

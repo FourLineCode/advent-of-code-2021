@@ -3,12 +3,8 @@ export function formatInput(rawInput) {
 }
 
 export function solution1(input) {
-	let min = Infinity;
-	for (let i = 0; i <= Math.max(...input); i++) {
-		let sum = input.reduce((s, n) => s + Math.abs(i - n), 0);
-		min = Math.min(min, sum);
-	}
-	return min;
+	const median = input.sort((a, b) => a - b)[Math.round(input.length / 2)];
+	return input.reduce((s, n) => s + Math.abs(median - n), 0);
 }
 
 export function solution2(input) {

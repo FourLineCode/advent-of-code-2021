@@ -3,17 +3,95 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"strconv"
+	"strings"
 )
 
 // Define current day for input
-const day = 2
+const day = 3
 
 func solution1(input string) int64 {
-	return 0
+	binary_list := strings.Split(strings.TrimSpace(input), "\n")
+	gamma_s, epsilon_s := "", ""
+	for i := 0; i < len(binary_list[0]); i++ {
+		count := map[string]int{"0": 0, "1": 0}
+		for _, binary := range binary_list {
+			count[string(binary[i])]++
+		}
+
+		if count["0"] > count["1"] {
+			gamma_s += "0"
+			epsilon_s += "1"
+			continue
+		}
+		gamma_s += "1"
+		epsilon_s += "0"
+	}
+
+	gamma, _ := strconv.ParseInt(gamma_s, 2, 64)
+	epsilon, _ := strconv.ParseInt(epsilon_s, 2, 64)
+	return int64(gamma * epsilon)
+
 }
 
 func solution2(input string) int64 {
-	return 0
+	binary_list := strings.Split(strings.TrimSpace(input), "\n")
+	oxygen_list := make([]string, len(binary_list))
+	co2_list := make([]string, len(binary_list))
+	copy(oxygen_list, binary_list)
+	copy(co2_list, binary_list)
+
+	for i := 0; i < len(oxygen_list[0]) && len(oxygen_list) > 1; i++ {
+		count := map[string]int{"0": 0, "1": 0}
+		for _, binary := range oxygen_list {
+			count[string(binary[i])]++
+		}
+
+		cmp := ""
+		if count["0"] > count["1"] {
+			cmp = "0"
+		} else if count["0"] < count["1"] {
+			cmp = "1"
+		} else {
+			cmp = "1"
+		}
+
+		oxygen_tmp := []string{}
+		for _, s := range oxygen_list {
+			if string(s[i]) == cmp {
+				oxygen_tmp = append(oxygen_tmp, s)
+			}
+		}
+		oxygen_list = oxygen_tmp
+	}
+
+	for i := 0; i < len(co2_list[0]) && len(co2_list) > 1; i++ {
+		count := map[string]int{"0": 0, "1": 0}
+		for _, binary := range co2_list {
+			count[string(binary[i])]++
+		}
+
+		cmp := ""
+		if count["0"] > count["1"] {
+			cmp = "1"
+		} else if count["0"] < count["1"] {
+			cmp = "0"
+		} else {
+			cmp = "0"
+		}
+
+		co2_tmp := []string{}
+		for _, s := range co2_list {
+			if string(s[i]) == cmp {
+				co2_tmp = append(co2_tmp, s)
+			}
+		}
+		co2_list = co2_tmp
+	}
+
+	oxygen, _ := strconv.ParseInt(oxygen_list[0], 2, 64)
+	co2, _ := strconv.ParseInt(co2_list[0], 2, 64)
+	return int64(oxygen * co2)
 }
 
 var test_input string = `

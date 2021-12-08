@@ -20,7 +20,7 @@ if (!solution1) {
 }
 
 if (!solution2) {
-	console.warn('No solution 2 found. Make sure your module exports a "solution2" function.');
+	console.warn('No solution 2 found!');
 } else {
 	console.log("Running solution 2 ...");
 	const result = await solution2(await formatInput(input));

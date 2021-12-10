@@ -11,10 +11,7 @@ export function solution1(input) {
 		for (const c of line) {
 			if ("({[<".includes(c)) stack.push(c);
 			else if (opening[c] === stack.pop()) continue;
-			else {
-				total += points[c];
-				break;
-			}
+			else total += points[c];
 		}
 	}
 	return total;
@@ -22,24 +19,17 @@ export function solution1(input) {
 
 export function solution2(input) {
 	const scores = [];
-	const points = { ")": 1, "]": 2, "}": 3, ">": 4 };
+	const points = { "(": 1, "[": 2, "{": 3, "<": 4 };
 	const opening = { ")": "(", "]": "[", "}": "{", ">": "<" };
-	const closing = { "(": ")", "[": "]", "{": "}", "<": ">" };
 	for (const line of input) {
 		const stack = [];
 		let incomplete = true;
 		for (const c of line) {
 			if ("({[<".includes(c)) stack.push(c);
 			else if (opening[c] === stack.pop()) continue;
-			else {
-				incomplete = false;
-				break;
-			}
+			else incomplete = false;
 		}
-		if (!incomplete) continue;
-		let score = 0;
-		while (stack.length) score = score * 5 + points[closing[stack.pop()]];
-		scores.push(score);
+		if (incomplete) scores.push(stack.reverse().reduce((a, c) => a * 5 + points[c], 0));
 	}
 	return scores.sort((a, b) => a - b)[Math.floor(scores.length / 2)];
 }

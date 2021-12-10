@@ -11,22 +11,20 @@ if (!solution1) {
 } else {
 	console.log("Running solution 1 ...");
 	const result = await solution1(await formatInput(input));
-	console.log(
-		"Test for part 1 -",
-		result === output.part1 ? "\x1b[32mPASSED\x1b[0m" : "\x1b[31mFAILED\x1b[0m"
-	);
+	const passed = result === output.part1;
+	console.log("Test for part 1 -", passed ? "\x1b[32mPASSED\x1b[0m" : "\x1b[31mFAILED\x1b[0m");
+	if (!passed) console.log("Expected:", output.part1, "| Got:", result);
 	console.log("Solution - 1:", await solution1(await formatInput(dayInput)));
 	console.log();
 }
 
 if (!solution2) {
-	console.warn('No solution 2 found!');
+	console.warn("No solution 2 found!");
 } else {
 	console.log("Running solution 2 ...");
 	const result = await solution2(await formatInput(input));
-	console.log(
-		"Test for part 2 -",
-		result === output.part2 ? "\x1b[32mPASSED\x1b[0m" : "\x1b[31mFAILED\x1b[0m"
-	);
+	const passed = result === output.part2;
+	console.log("Test for part 2 -", passed ? "\x1b[32mPASSED\x1b[0m" : "\x1b[31mFAILED\x1b[0m");
+	if (!passed) console.log("Expected:", output.part2, "| Got:", result);
 	console.log("Solution - 2:", await solution2(await formatInput(dayInput)));
 }

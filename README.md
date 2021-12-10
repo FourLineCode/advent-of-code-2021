@@ -11,19 +11,19 @@ Solutions are defined in JavaScript files in the `solutions` directory. The modu
 **Run solution for a specific day**
 
 ```bash
-npm start <day>
+yarn start <day>
 ```
 
 **Running on dev mode for a specific day:**
 
 ```bash
-npm run dev <day>
+yarn dev <day>
 ```
 
 **Fetch input for a specific day**
 
 ```bash
-npm run input <day>
+yarn input <day>
 ```
 
 ## Running GoLang solutions
